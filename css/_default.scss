@@ -1,0 +1,172 @@
+/* reset styles */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 16px;
+	font-family: "Raleway", sans-serif;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+body {}
+
+.wrapper {}
+
+/* --------- end reset styles -------------- */
+
+/* default  */
+
+body {
+	background-color: #1b2f33;
+	color: #ffffff;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	scroll-behavior: smooth;
+
+	[class*="__container"] {
+		position: relative;
+		max-width: 1440px;
+		margin: 0 auto;
+		
+	}
+
+	.wrapper {
+		position: relative;
+		width: 100%;
+		min-height: 100%;
+		// max-width: 1440px;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+
+}
+
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 390;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 390px) / #{$maxWidth}));
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,regular,700);
+
+a {
+	font-family: "Raleway", sans-serif;
+	font-size: 15px;
+	line-height: 14px;
+	color: #53767c;
+	font-weight: 400;
+
+	&:hover {
+		color: #d6b369;
+	}
+}
+
+h4 {
+	font-size: 30px;
+	line-height: 30px;
+	color: #ffffff;
+	font-weight: 300;
+	font-family: "Raleway";
+}
+
+%regularBtn {
+	height: 48px;
+	max-width: 221px;
+	color: #9b8d60;
+	font-size: 15px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid rgba(83, 118, 124, 0.6);
+	background-color: #1c2b2e;
+}
