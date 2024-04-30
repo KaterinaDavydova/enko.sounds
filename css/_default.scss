@@ -169,4 +169,8 @@ h4 {
 	justify-content: center;
 	border: 2px solid rgba(83, 118, 124, 0.6);
 	background-color: #1c2b2e;
+
+	&:hover {
+		border: 2px solid rgba(215,	180,	106, 0.6);
+	}
 }

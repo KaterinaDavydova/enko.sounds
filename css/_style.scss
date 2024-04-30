@@ -185,7 +185,7 @@
 
         .navSocialsMedia__item {
             &:hover{
-                    filter: brightness(0) saturate(100%) invert(83%) sepia(8%) saturate(2149%) hue-rotate(356deg) brightness(90%) contrast(86%);
+                filter: brightness(0) saturate(100%) invert(56%) sepia(91%) saturate(2698%) hue-rotate(151deg) brightness(93%) contrast(94%);
                     cursor: pointer;
                 }
             img {
@@ -302,6 +302,10 @@
                 text-align: center;
                 width: 135px;
                 height: 27px;
+            }
+
+            .products__item_green {
+                color: #53767c;
             }
 
             .products__item_yellow {
@@ -478,7 +482,7 @@
 
             .socialsmedia__item {
                 &:hover{
-                    filter: brightness(0) saturate(100%) invert(83%) sepia(8%) saturate(2149%) hue-rotate(356deg) brightness(90%) contrast(86%);
+                    filter: brightness(0) saturate(100%) invert(56%) sepia(91%) saturate(2698%) hue-rotate(151deg) brightness(93%) contrast(94%);
                     cursor: pointer;
                 }
                 img {
