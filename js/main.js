@@ -94,3 +94,16 @@ const splide = new Splide('#slider__wrap', {
 });
 
 splide.mount();
+
+// -----------video------------
+let video = document.getElementById('video-frame');
+
+video.controls = false;
+video.addEventListener('click', function() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+    video.controls = true;
+});
