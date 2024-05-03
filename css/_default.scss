@@ -90,10 +90,6 @@ h6 {
 	font-weight: 400;
 }
 
-body {}
-
-.wrapper {}
-
 /* --------- end reset styles -------------- */
 
 /* default  */
@@ -109,10 +105,10 @@ body {
 	scroll-behavior: smooth;
 
 	[class*="__container"] {
+		display: flex;
+        flex-direction: column;
 		position: relative;
-		max-width: 1440px;
-		margin: 0 auto;
-		
+		// margin: 0 auto;
 	}
 
 	.wrapper {
@@ -124,8 +120,6 @@ body {
 		flex-direction: column;
 		overflow: hidden;
 	}
-
-
 }
 
 $maxWidth: 1440;
@@ -161,16 +155,22 @@ h4 {
 %regularBtn {
 	height: 48px;
 	max-width: 221px;
-	color: #9b8d60;
-	font-size: 15px;
+	color: #1c1c1c;
+	font-size: 16px;
+	font-weight: 700;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid rgba(83, 118, 124, 0.6);
-	background-color: #1c2b2e;
+	border: 2px solid rgba(101, 197, 218, 0.6);
+	background-color: #65c5da;
 
 	&:hover {
-		border: 2px solid rgba(215,	180,	106, 0.6);
+		border-color: #65c5da;
+		box-shadow: 0 0 20px rgba(101, 197, 218, 0.8);
+	}
+	  
+	&:active {
+		box-shadow: 0 0 10px rgba(101, 197, 218, 0.4);
 	}
 }
